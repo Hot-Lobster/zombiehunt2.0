@@ -24,9 +24,7 @@ class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <GameControls />
-          </Col>
+          <GameControls />
         </Row>
         <Row>
           <Navbottom />

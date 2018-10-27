@@ -2,7 +2,10 @@ import React from "react";
 import gameboardImage from "../imgs/gameBoard/board.png"; //image path placeholder
 import database from "../firebase/firebase";
 import char1 from "../imgs/p2char/char1.png";
-const playerSpawn = database.ref("players");
+const playerSpawn = database
+  .database()
+  .ref("players")
+  .orderByChild("position");
 
 export default class BoardAndGrid extends React.Component {
   createGrid = () => {
@@ -16,22 +19,28 @@ export default class BoardAndGrid extends React.Component {
     }
     return grid;
   };
-  spawnChar = () => {
-    playerSpawn.player.position.map(position => {
-      return (
-        <div id={position}>
-          {<img src={char1} alt="char" className="img-fluid" />}
-        </div>
-      );
+  grabTasks() {
+    var x = [];
+    playerSpawn.ref("players.position").on("value", function(snapshot) {
+      return (x = snapshot.val());
     });
-  };
+    this.setState({ position: x });
+  }
   render() {
     return (
       <div id="game-container">
-        {/* Creating the grid below so the players can play on, don't expand below lel ;) */}
         <div id="grid-container">{this.createGrid()}</div>
         <div id="game-image-container">
           {<img src={gameboardImage} className="img-fluid" alt="gameboard" />}
+        </div>
+        <div>
+          {this.state.position.map(position => {
+            return (
+              <div id={position}>
+                {<img src={char1} alt="char" className="img-fluid" />}
+              </div>
+            );
+          })}
         </div>
       </div>
     );

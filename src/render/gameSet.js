@@ -1,26 +1,21 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import BoardAndGrid from "./boardAndGrid.js";
+import Navtop from "./navtop.js";
+import Navbottom from "./navbottom.js";
+import GameControls from "./gameControls.js";
 import { Container, Row, Col } from "reactstrap";
-import "./index.css";
-import NameForm from "./render/Nameform.js";
-import BoardAndGrid from "./render/boardAndGrid.js";
-import Navtop from "./render/navtop.js";
-import Navbottom from "./render/navbottom.js";
-import GameControls from "./render/gameControls.js";
+import "../index.css";
 
-class App extends Component {
+export default class GameSet extends Component {
   render() {
     return (
-      <Container>
+      <Container className="contain">
         <Row>
           <Col>
             <Navtop />
           </Col>
         </Row>
         <Row>
-          <Col>
-            <NameForm />
-          </Col>
           <Col>
             <BoardAndGrid />
           </Col>
@@ -37,5 +32,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

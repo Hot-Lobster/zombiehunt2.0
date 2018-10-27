@@ -7,7 +7,7 @@ export default class Navbottom extends React.Component {
       <Navbar light expand="md" className="App-footer">
           <a
             className="Repo-link"
-            href="https://github.com/nicksedillos/project-2"
+            href="https://github.com/olsoa4/zombiehunt2.0"
             target="_blank"
             rel="noopener noreferrer"
           >

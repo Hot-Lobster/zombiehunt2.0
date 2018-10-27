@@ -1,11 +1,11 @@
 import React from "react";
 import gameboardImage from "../imgs/gameBoard/board.png"; //image path placeholder
-import database from "../firebase/firebase";
-import char1 from "../imgs/p2char/char1.png";
-const playerSpawn = database
-  .database()
-  .ref("players")
-  .orderByChild("position");
+// import database from "../firebase/firebase";
+// import char1 from "../imgs/p2char/char1.png";
+// const playerSpawn = database
+//   .database()
+//   .ref("players")
+//   .orderByChild("position");
 
 export default class BoardAndGrid extends React.Component {
   createGrid = () => {
@@ -19,13 +19,13 @@ export default class BoardAndGrid extends React.Component {
     }
     return grid;
   };
-  grabTasks() {
-    var x = [];
-    playerSpawn.ref("players.position").on("value", function(snapshot) {
-      return (x = snapshot.val());
-    });
-    this.setState({ position: x });
-  }
+  // grabTasks() {
+  //   var x = [];
+  //   playerSpawn.ref("players.position").on("value", function(snapshot) {
+  //     return (x = snapshot.val());
+  //   });
+  //   this.setState({ position: x });
+  // }
   render() {
     return (
       <div id="game-container">
@@ -33,7 +33,7 @@ export default class BoardAndGrid extends React.Component {
         <div id="game-image-container">
           {<img src={gameboardImage} className="img-fluid" alt="gameboard" />}
         </div>
-        <div>
+        {/* <div>
           {this.state.position.map(position => {
             return (
               <div id={position}>
@@ -41,7 +41,7 @@ export default class BoardAndGrid extends React.Component {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     );
   }

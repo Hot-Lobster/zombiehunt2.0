@@ -3,7 +3,7 @@ import leftArrow from "../imgs/arrows/leftArrow.png"; //image path placeholder
 import rightArrow from "../imgs/arrows/rightArrow.png"; //image path placeholder
 import upArrow from "../imgs/arrows/upArrow.png"; //image path placeholder
 import downArrow from "../imgs/arrows/downArrow.png"; //image path placeholder
-// import database from "../firebase/firebase";
+// import { PlayerMovement } from "../firebase/firebase";
 
 export default class GameControls extends React.Component {
   constructor(props) {

@@ -1,3 +1,6 @@
+/* import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah");
+
 body {
   margin: 0;
   padding: 0;
@@ -16,16 +19,21 @@ code {
   padding: 0;
 }
 
+.App-container {
+  background-color: #aabdbb;
+}
+
 .App-header {
   background-color: #424c58;
   color: #ffffff;
   text-align: center;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   font-size: xx-large;
+  width: 100%;
 }
 
 .Sub-heading {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   color: #424c58;
 }
 
@@ -35,12 +43,14 @@ code {
   width: 73%;
   float: left;
   margin: 2%;
+  background-color: #aabdbb;
 }
 
 #game-container {
   width: 1000px;
   height: auto;
   position: relative;
+  background-color: #aabdbb;
 }
 
 /* The grid it's self*/
@@ -55,10 +65,10 @@ code {
 }
 
 /* The individual squares for the grid */
-#grid-container>div {
+#grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 24.6px 24.6px;
-  opacity: .25;
+  opacity: 0.25;
   /* Change grid opacity here*/
   z-index: 10;
 }
@@ -70,6 +80,7 @@ code {
   position: absolute;
   top: 0px;
   left: 0px;
+  background-color: #aabdbb;
 }
 
 .Players {
@@ -78,6 +89,7 @@ code {
   width: 23%;
   float: left;
   margin: 2%;
+  background-color: #aabdbb;
 }
 
 .Chat-box {
@@ -85,7 +97,8 @@ code {
   border-color: #ff5722;
   width: 73%;
   float: left;
-  margin: 2%
+  margin: 2%;
+  background-color: #aabdbb;
 }
 
 .Controls {
@@ -94,13 +107,16 @@ code {
   width: 23%;
   float: left;
   margin: 2%;
+  background-color: #aabdbb;
 }
 
 .App-footer {
   background-color: #424c58;
   color: #ffffff;
   text-align: center;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
+  font-size: small;
+  width: 100%;
 }
 
 .Repo-link:link {
@@ -109,4 +125,10 @@ code {
 
 .Repo-link:hover {
   color: #ff5722;
+}
+
+button {
+  background-color: #aabdbb;
+  border-color: #aabdbb;
+  padding-top: 2%;
 }

@@ -11,11 +11,9 @@ import GameControls from "./render/gameControls.js";
 class App extends Component {
   render() {
     return (
-      <Container>
+      <Container className="App-container">
         <Row>
-          <Col>
-            <Navtop />
-          </Col>
+          <Navtop />
         </Row>
         <Row>
           <Col>
